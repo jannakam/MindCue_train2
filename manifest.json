@@ -1,0 +1,52 @@
+{
+    "name": "MindCue Extension YOLO",
+    "version": "1.0.0",
+    "description": "This extension is for a system that helps filter out people's triggers online",
+    "author": "Novas",
+    "action": {
+        "default_popup": "Extension/popup.html",
+        "default_title": "MindCue Extension",
+        "default_icon": {
+          "16": "Extension/images/Brainstorm.png",
+         "32": "Extension/images/Brainstorm.png",
+          "48": "Extension/images/Brainstorm.png",
+          "128": "Extension/images/Brainstorm.png"
+        }
+    },
+    "web_accessible_resources": [{ 
+      "resources": ["Extension/images/coverBackground.png"],
+      "matches": ["<all_urls>"]
+    }],
+    "icons": {
+      "16": "Extension/images/Brainstorm.png",
+      "32": "Extension/images/Brainstorm.png",
+      "48": "Extension/images/Brainstorm.png",
+      "128": "Extension/images/Brainstorm.png"
+    },
+    "background": {
+      "service_worker": "Extension/background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["Extension/content.js","Extension/settings.js","ObjectDetector/worker.js","Extension/sweetalert2.all.min.js"],
+          "css":["Extension/content_script.css","Extension/sweetalert2.min.css"],
+          "run_at": "document_end"
+        }
+      ],
+     "permissions": [
+       "declarativeContent",
+       "storage",
+       "tabs",
+       "activeTab",
+       "windows",
+       "scripting",
+       "activeTab", "desktopCapture", "mediaCapture", "audioCapture", "videoCapture",
+       "downloads",
+       "fileSystem.write"
+     ],
+  "host_permissions":  ["<all_urls>"],
+  "manifest_version": 3
+  
+}
