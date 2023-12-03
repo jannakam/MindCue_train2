@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object detector</title>
+    <link rel="stylesheet" href="../Extension/Alerts.css">
+        <!-- <style>
+        canvas{
+            position: absolute; /* Absolutely position both the video and canvas */
+            top: 71%;
+            left: 60.5%;
+            z-index: 1;
+            transform: translate(-50%, -50%); /* Center them */
+        }
+    </style> -->
+</head>
+<body>
+    <div id="content-wrapper" style="position: absolute;">
+        <video id="v" style="display: block;" src="sample.mp4"></video> <!-- Start with video hidden -->
+    </div>
+    <canvas style="position: absolute;"></canvas>
+    <br/>
+    <div style="position: absolute; top: 800px;">
+        <button id="play" >Play</button>
+        <button id="pause">Pause</button>
+    </div>
+
+    <script src="object_detector.js" defer></script>
+    <script src="worker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script> 
+ <script src="../Extension/content.js" defer></script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object detector</title>
+    <link rel="stylesheet" href="../Extension/Alerts.css">
+</head>
+<body>
+
+<video muted autoplay style="display:none" src="sample.mp4"></video>
+<br/>
+<img id="extraImage" src="../cat_dog.jpg" alt="">
+<canvas ></canvas><br/>
+<button id="play">Play</button>&nbsp;
+<button id="pause">Pause</button>
+<script src="object_detector.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="worker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+
+</body>
+</html> -->
